@@ -1,35 +1,40 @@
 <template>
+  <main class="bg-black p-5">
+
+    <header class="">
+      <router-link class="logo" to="/">Tik Tak</router-link>
+      <div class="menu-toggle"></div>
+      <nav>
+        <ul>
+
+          <li>
+            <router-link to="/">Accueil</router-link>
+          </li>
+          <li>
+            <router-link to="/perso">Page 1</router-link>
+          </li>
+          <li>
+            <router-link to="/connexion">Connexion / Inscription</router-link>
+          </li>
+          <li>
+            <router-link to="/liste">Liste</router-link>
+          </li>
+
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+
+    <!-- Affiche les pages -->
+    <Suspense>
+      <router-view class="m-2 border-2 p-2" />
+    </Suspense>
 
 
-  <header class="">
-    <router-link class="logo" to="/">Tik Tak</router-link>
-    <div class="menu-toggle"></div>
-    <nav>
-      <ul>
 
-        <li>
-          <router-link to="/">Accueil</router-link>
-        </li>
-        <li>
-          <router-link to="/perso">Page 1</router-link>
-        </li>
-        <li>
-          <router-link to="/connexion">Connexion / Inscription</router-link>
-        </li>
-        <li>
-          <router-link to="/liste">Liste</router-link>
-        </li>
 
-      </ul>
-    </nav>
-    <div class="clearfix"></div>
-  </header>
 
-  <!-- Affiche les pages -->
-  <Suspense>
-    <router-view class="m-2 border-2 p-2" />
-  </Suspense>
-
+  </main>
   <footer class="bg-black p-5 grid grid-cols-1 md:grid-cols-12">
     <div class="md:col-span-2 pb-2 md:mb-0">
       <p class="text-gray-200">Information</p>
@@ -88,7 +93,7 @@ header {
   background: #fff;
   box-sizing: border-box;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .8);
 
 }
 
