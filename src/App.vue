@@ -1,5 +1,6 @@
 <template>
-  <main class="bg-black p-5 bg-gradient-to-t">
+  <main class="bg-black p-5 bg-gradient-to-b from-[#080038] to-black ...">
+
 
     <header class="">
       <router-link class="logo" to="/">Tik Tak</router-link>
