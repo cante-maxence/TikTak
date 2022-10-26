@@ -6,13 +6,13 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-/*declare global {
-  var supabase: SupabaseClient;
-}
+//declare global {
+//  var supabase: SupabaseClient;
+//}
 
 //@ts-ignore
 
-*/
+
 globalThis.supabase = supabase;
 
 export const user = ref(supabase.auth.user());
