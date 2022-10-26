@@ -55,7 +55,8 @@
 
         <!--Card 1-->
         <div class=" rounded overflow-hidden shadow-lg pb-5">
-            <p class="text-white font-light text-xl lg:text-2xl xl:text-3xl mt-10 mx-6 text-center ">
+            <p
+                class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                 Tissu
             </p>
             <div class="radio grid pt-5 grid-cols-2">
@@ -67,7 +68,8 @@
                 <label for="radio-2 " class=" text-white"></label>
             </div>
             <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 text-white text-center lg:text-2xl xl:text-3xl">Tissu Français</div>
+                <div class="font-bold  mb-2 text-white text-center  lg:text-2xl xl:text-3xl">
+                    Tissu Français</div>
                 <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible"><br />
                     Qualité supérieure, parfaitement<br /> adapté à votre boîtier de montre.
                 </p>

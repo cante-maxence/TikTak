@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { supabase, user } from '../supabase';
+</script>
+
 <template>
     <section class="flex flex-col md:flex-row h-screen items-center">
 
@@ -38,7 +42,7 @@
 
                 <hr class="my-6 border-gray-300 w-full">
 
-                <button type="button"
+                <button type="button" @pointerdown="supabase.auth.signIn({ provider: 'google' })"
                     class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                     <div class="flex items-center justify-center">
                         <svg class="w-6 h-6" viewBox="0 0 48 48">
@@ -55,10 +59,11 @@
                             <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
                         </svg>
                         <span class="ml-4">
-                            Se connecter avec Google</span>
+                            Se connecter avec Google
+                        </span>
                     </div>
                 </button>
-                <button type="button"
+                <button type="button" @pointerdown="supabase.auth.signIn({ provider: 'facebook' })"
                     class="w-full block mt-6 bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                     <div class="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">

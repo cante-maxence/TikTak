@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 </script>
+
 <template>
   <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8">
     <!--ici svg recup de truc la-->
