@@ -40,35 +40,38 @@
     <div class="md:col-span-2 pb-2 md:mb-0">
       <p class="text-gray-200">Information</p>
       <ul class="pt-5 text-gray-400">
-        <li>TIK TAK</li>
-        <li>Politique de confidentialité</li>
-        <li>Mentions légales</li>
-        <li>Cookies</li>
+        <li><a href="#">TIK TAK</a> </li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Cookies</a></li>
       </ul>
     </div>
     <div class="md:col-span-2 pb-2 md:mb-0">
       <p class="text-gray-200">Compte</p>
       <ul class="pt-5 text-gray-400">
-        <li>Connexion</li>
-        <li>Inscription</li>
-        <li>Mes données</li>
+        <li>
+          <router-link to="/connexion">Connexion</router-link>
+        </li>
+        <li>
+          <router-link to="/connexion">Inscription</router-link>
+        </li>
+        <li><a href="#">Mes données</a></li>
       </ul>
     </div>
     <div class="md:col-span-2 pb-2 md:mb-0">
       <p class="text-gray-200">Besoin d'aide ?</p>
       <ul class="pt-5 text-gray-400">
-        <li>F.A.Q</li>
-        <li>Contactez-nous</li>
+        <li><a href="#">F.A.Q</a></li>
+        <li><a href="#">Contactez-nous</a></li>
 
       </ul>
     </div>
     <div class="md:col-span-2 pb-2 md:mb-0">
       <p class="text-gray-200">Nos Réseaux</p>
       <ul class="pt-5 text-gray-400">
-        <li><a>Facebook</a></li>
-        <li><a>Twitter</a></li>
-        <li>Co-Branding</li>
-        <li>Give Away</li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+
       </ul>
     </div>
     <div class="md:col-span-4 pb-2 md:mb-0">
