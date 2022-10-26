@@ -1,27 +1,115 @@
 <template>
 
-    <p class="text-white font-light text-5xl mt-10ml-6 text-center">
-        Tik Tak <br />
-        l’Originalité est a votre poigné
+    <p class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+        Tik Tak<br />l’Originalité est a votre poigné
     </p>
-    <div class=" hidden lg:flex m-auto text-center w-1/4 md:w-1/2 xl:w-1/2 h-screen   mx-10">
+    <div class=" flex m-auto  w-1/3 py-10">
         <img src="../assets/301accueil.png" alt="Une montre de luxe sur une couette bleu"
             class="w-full h-full object-cover">
     </div>
 
 
-    <p class="text-white font-light text-3xl md:w-full pt-5 w-1/2 ml-6 text-center">
-        Bienvenue chez Tik Tak !<br />
-        Le site qui vous permet de créer de toutes pièces une montre <br />absolument unique. Grâce à notre outil de
-        conception
-        vous pourrez<br /> personnaliser une montre dans le moindre détail.
-        <br />
+    <p
+        class="text-white font-light text-3xl md:w-full pt-5  mx-6 text-center sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+        Bienvenue chez Tik Tak !<br />Le site qui vous permet de créer de toutes pièces une montre <br />absolument
+        unique. Grâce à notre outil de
+        conception vous pourrez<br />personnaliser une montre dans le moindre détail.
+        <br /><br />
         Le temps n’attends personne alors dépêchez vous !!!
     </p>
 
+    <div class="border-sky-400 border-2 hover:border-t-4 grid grid-cols-2 my-10 xs:grid-cols-1">
+
+        <div class="p-10">
+            <!--Card 1-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <p
+                    class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                    Cuir
+                </p>
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-white text-center">Cuir Français</div>
+                    <p class="text-gray-700 text-base text-center">
+                        Dans le monde du luxe, le cuir s'est imposé comme un matériau aux finitions raffinées.
+                        100% Français nous vient tout droit de
+                        l'Allier
+                    </p>
+                </div>
+                <div class="radio grid grid-cols-2">
+                    <div class="radio__1">
+
+                    </div>
+
+                    <input id="radio-2" type="radio" name="radio" value="2" checked>
+                    <label for="radio-2 " class=" text-white"></label>
+                </div>
+            </div>
 
 
 
+
+
+        </div>
+        <div class="p-10">
+            <!--Card 1-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <p
+                    class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                    Tissu
+                </p>
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-white text-center">Tissu Français</div>
+                    <p class="text-gray-700 text-base text-center">
+                        Dans le monde du luxe, le cuir s'est imposé comme un matériau aux finitions raffinées.
+                        100% Français nous vient tout droit de
+                        l'Allier
+                    </p>
+                </div>
+                <div class="radio grid grid-cols-2">
+                    <div class="radio__1">
+
+                    </div>
+
+                    <input id="radio-2" type="radio" name="radio" value="2" checked>
+                    <label for="radio-2 " class=" text-white"></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="py-6">
+        <div class="flex max-w-md  border-sky-400 border-2 hover:border-t-4  shadow-lg rounded-lg overflow-hidden">
+
+            <div class="w-full p-4">
+                <h1 class="text-white font-bold text-2xl">Montre</h1>
+
+                <div class="flex item-center mt-2">
+
+                </div>
+                <div class="flex item-center justify-between mt-3">
+                    <h1 class="text-gray-400 font-bold text-xl">184 €</h1>
+                    <button class="px-3 py-2 bg-blue-800 text-white text-xs font-bold uppercase rounded">Ajouter
+                        au
+                        panier</button>
+                    <button class="px-3 py-2 bg-blue-800 text-white text-xs font-bold uppercase rounded">Ajouter
+                        a
+                        votre
+                        liste</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
 
 </template>
+
+<style>
+
+</style>
