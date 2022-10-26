@@ -18,63 +18,65 @@
         Le temps n’attends personne alors dépêchez vous !!!
     </p>
 
-    <div class="border-sky-400 border-2 hover:border-t-4 grid grid-cols-2 my-10  xs:grid-cols-1">
+    <div class="border-sky-400 border-2 hover:border-t-4  grid grid-cols-2 my-10 mx-16 p-auto">
 
-        <div class="p-10">
-            <!--Card 1-->
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <p
-                    class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                    Cuir
+
+        <!--Card 1-->
+        <div class=" rounded overflow-hidden shadow-lg pb-5">
+            <p
+                class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                Cuir
+            </p>
+            <div class="radio pt-5 grid grid-cols-2">
+                <div class="radio__1">
+
+                </div>
+
+                <input id="radio-2" type="radio" name="radio" value="2" checked>
+                <label for="radio-2 " class=" text-white"></label>
+            </div>
+            <div class="px-6 py-4">
+                <div class="font-bold  mb-2 text-white text-center  lg:text-2xl xl:text-3xl">
+                    Cuir Français</div>
+                <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible">
+                    Dans le monde du luxe, le cuir s'est imposé <br />comme un matériau aux finitions raffinées.
+                    <br /> 100% Français nous vient tout droit de
+                    l'Allier
                 </p>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-white text-center">Cuir Français</div>
-                    <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible">
-                        Dans le monde du luxe, le cuir s'est imposé comme un matériau aux finitions raffinées.
-                        100% Français nous vient tout droit de
-                        l'Allier
-                    </p>
-                </div>
-                <div class="radio grid grid-cols-2">
-                    <div class="radio__1">
-
-                    </div>
-
-                    <input id="radio-2" type="radio" name="radio" value="2" checked>
-                    <label for="radio-2 " class=" text-white"></label>
-                </div>
             </div>
 
 
 
 
 
+
+
         </div>
-        <div class="p-10">
-            <!--Card 1-->
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <p
-                    class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                    Tissu
+
+        <!--Card 1-->
+        <div class=" rounded overflow-hidden shadow-lg pb-5">
+            <p class="text-white font-light text-xl lg:text-2xl xl:text-3xl mt-10 mx-6 text-center ">
+                Tissu
+            </p>
+            <div class="radio grid pt-5 grid-cols-2">
+                <div class="radio__1">
+
+                </div>
+
+                <input id="radio-2" type="radio" name="radio" value="2" checked>
+                <label for="radio-2 " class=" text-white"></label>
+            </div>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-white text-center lg:text-2xl xl:text-3xl">Tissu Français</div>
+                <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible"><br />
+                    Qualité supérieure, parfaitement<br /> adapté à votre boîtier de montre.
                 </p>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-white text-center">Tissu Français</div>
-                    <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible"><br />
-                        Qualité supérieure, parfaitement<br /> adapté à votre boîtier de montre.
-                    </p>
-                </div>
-                <div class="radio grid grid-cols-2">
-                    <div class="radio__1">
-
-                    </div>
-
-                    <input id="radio-2" type="radio" name="radio" value="2" checked>
-                    <label for="radio-2 " class=" text-white"></label>
-                </div>
             </div>
 
         </div>
+
     </div>
+
 
 
 
