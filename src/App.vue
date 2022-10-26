@@ -11,9 +11,7 @@
           <li>
             <router-link to="/">Accueil</router-link>
           </li>
-          <li>
-            <router-link to="/perso">Page 1</router-link>
-          </li>
+
           <li>
             <router-link to="/connexion">Connexion / Inscription</router-link>
           </li>

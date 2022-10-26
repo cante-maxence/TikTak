@@ -1,72 +1,22 @@
 <script setup lang="ts">
 
-import { ref } from "@vue/reactivity";
-import { supabase } from "../supabase";
-import FicheOffreMontre from "../components/MontreCustom.vue";
-import { useRouter } from "vue-router";
-const router = useRouter();
-// On fait une variable réactive qui référence les données
-// ATTENTION : faire une Ref pas une Reactive car :
-// c'est l'objet qui doit être réactif, pas ses props
-const montre = ref({});
-const props = defineProps(["id"]);
-if (props.id) {
-  // On charge les données de la montre
-  let { data, error } = await supabase
-    .from("Montre")
-    .select("*")
-    .eq("id", props.id);
-  if (error || !data)
-    console.log("n'a pas pu charger le table Montre :", error);
-  else montre.value = data[0];
-}
-async function upsertMontre(dataForm, node) {
-  const { data, error } = await supabase.from("Montre").upsert(dataForm);
-  if (error) node.setErrors([error.message]);
-  else {
-    node.setErrors([]);
-    router.push({ name: "edit-id", params: { id: data[0].id } });
-  }
-}
-const { data: dataQuartierCommune, error } = await supabase
-  .from("quartiercommune")
-  .select("*");
-if (error) console.log("n'a pas pu charger la vue quartiercommune :", error);
 </script>
 <template>
-  <div>
-    <div class="p-2">
-      <h2 class="text-2xl">Résultat (Prévisualisation)</h2>
-      <!-- Optionnel on affiche les données -->
-      <FicheOffreMontre v-bind="montre" />
+  <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8">
+    <!--ici svg recup de truc la-->
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-600 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
+        eaque, exercitationem praesentium nihil.
+      </p>
     </div>
-    <div class="p-2">
-      <!-- On passe la "ref" à FormKit -->
-      <FormKit type="form" v-model="montre" :config="{
-        classes: {
-          input: 'p-1 rounded border-gray-300 shadow-sm border',
-          label: 'text-gray-600',
-        },
-      }" :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }" @submit="upsertMontre">
-        <FormKit name="nomMontre" label="nom" />
-        <FormKit name="prix" label="prix" type="number" />
-        <FormKit name="surface" label="surface" />
-        <FormKit name="nbrChambres" label="nbr de chambres" type="number" />
-        <FormKit name="nbrSDB" label="nbr de SDB" type="number" />
-        <FormKit name="adresse" label="adresse" />
-        <FormKit name="image" label="image" />
-        <FormKit name="code_Quartier" label="Quartier" type="select">
-          <option value="" :disabled="true">Choisir un quartier</option>
-          <optgroup v-for="(listeQuartier, libelleCommune) in groupBy(
-            dataQuartierCommune,
-            'libelle_Commune'
-          )" :label="`Commune : ${libelleCommune}`">
-            <option v-for="quartier in listeQuartier" :key="quartier.code_Quartier" :value="quartier.code_Quartier">
-              {{ quartier.libelle_Quartier }}
-            </option>
-          </optgroup>
-        </FormKit>
-      </FormKit>
+    <div class="px-6 py-4">
+      <span
+        class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 mr-2">#photography</span>
+      <span
+        class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 mr-2">#travel</span>
+      <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600">#winter</span>
     </div>
   </div>
 </template>

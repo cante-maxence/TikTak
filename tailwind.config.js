@@ -6,6 +6,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fonts: {
+        'jock': 'Jockey One',
+      },
       colors: {
         'fonceblue': '#080038',
       },
