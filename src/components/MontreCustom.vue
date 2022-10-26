@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import groupBy from "lodash/groupBy";
+
 import { ref } from "@vue/reactivity";
 import { supabase } from "../supabase";
-import FicheOffreMaison from "./FicheOffreMaison.vue";
+import FicheOffreMontre from "../components/MontreCustom.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 // On fait une variable réactive qui référence les données
 // ATTENTION : faire une Ref pas une Reactive car :
 // c'est l'objet qui doit être réactif, pas ses props
-const maison = ref({});
+const montre = ref({});
 const props = defineProps(["id"]);
 if (props.id) {
-  // On charge les données de la maison
+  // On charge les données de la montre
   let { data, error } = await supabase
-    .from("Maison")
+    .from("Montre")
     .select("*")
     .eq("id", props.id);
   if (error || !data)
-    console.log("n'a pas pu charger le table Maison :", error);
-  else maison.value = data[0];
+    console.log("n'a pas pu charger le table Montre :", error);
+  else montre.value = data[0];
 }
-async function upsertMaison(dataForm, node) {
-  const { data, error } = await supabase.from("Maison").upsert(dataForm);
+async function upsertMontre(dataForm, node) {
+  const { data, error } = await supabase.from("Montre").upsert(dataForm);
   if (error) node.setErrors([error.message]);
   else {
     node.setErrors([]);
@@ -38,23 +38,17 @@ if (error) console.log("n'a pas pu charger la vue quartiercommune :", error);
     <div class="p-2">
       <h2 class="text-2xl">Résultat (Prévisualisation)</h2>
       <!-- Optionnel on affiche les données -->
-      <FicheOffreMaison v-bind="maison" />
+      <FicheOffreMontre v-bind="montre" />
     </div>
     <div class="p-2">
       <!-- On passe la "ref" à FormKit -->
-      <FormKit
-        type="form"
-        v-model="maison"
-        :config="{
-          classes: {
-            input: 'p-1 rounded border-gray-300 shadow-sm border',
-            label: 'text-gray-600',
-          },
-        }"
-        :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
-        @submit="upsertMaison"
-      >
-        <FormKit name="nomMaison" label="nom" />
+      <FormKit type="form" v-model="montre" :config="{
+        classes: {
+          input: 'p-1 rounded border-gray-300 shadow-sm border',
+          label: 'text-gray-600',
+        },
+      }" :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }" @submit="upsertMontre">
+        <FormKit name="nomMontre" label="nom" />
         <FormKit name="prix" label="prix" type="number" />
         <FormKit name="surface" label="surface" />
         <FormKit name="nbrChambres" label="nbr de chambres" type="number" />
@@ -63,18 +57,11 @@ if (error) console.log("n'a pas pu charger la vue quartiercommune :", error);
         <FormKit name="image" label="image" />
         <FormKit name="code_Quartier" label="Quartier" type="select">
           <option value="" :disabled="true">Choisir un quartier</option>
-          <optgroup
-            v-for="(listeQuartier, libelleCommune) in groupBy(
-              dataQuartierCommune,
-              'libelle_Commune'
-            )"
-            :label="`Commune : ${libelleCommune}`"
-          >
-            <option
-              v-for="quartier in listeQuartier"
-              :key="quartier.code_Quartier"
-              :value="quartier.code_Quartier"
-            >
+          <optgroup v-for="(listeQuartier, libelleCommune) in groupBy(
+            dataQuartierCommune,
+            'libelle_Commune'
+          )" :label="`Commune : ${libelleCommune}`">
+            <option v-for="quartier in listeQuartier" :key="quartier.code_Quartier" :value="quartier.code_Quartier">
               {{ quartier.libelle_Quartier }}
             </option>
           </optgroup>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import FicheOffreMaison from "../components/FicheOffreMaison.vue";
+import FicheOffreMontre from "../components/MontreCustom.vue";
 import { supabase } from "../supabase";
-let { data: maisons, error } = await supabase.from("Maison").select("*");
-console.log(maisons);
-if (error) console.log("n'a pas pu charger le table Maison :", error);
+let { data: montres, error } = await supabase.from("Montre").select("*");
+console.log(montres);
+if (error) console.log("n'a pas pu charger le table montre :", error);
 </script>
 <template>
     <div class="p-2">
-        <FicheOffreMaison v-for="maison in maisons" :key="maison.nomMaison" v-bind="maison" />
+        <MontreCustom v-for="montre in montres" :key="montre.nomMontre" v-bind="montre" />
     </div>
 </template>
