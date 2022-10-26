@@ -81,7 +81,7 @@
 
 
 
-    <div class="py-6">
+    <div class="py-6 ">
         <div class="flex max-w-md  border-sky-400 border-2 hover:border-t-4  shadow-lg rounded-lg overflow-hidden">
 
             <div class="w-full p-4">
