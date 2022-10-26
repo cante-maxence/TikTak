@@ -3,7 +3,7 @@
 
 
     <header class="">
-      <router-link class="logo" to="/">Tik Tak</router-link>
+      <router-link class="logo" to="/"> TiK•TaK</router-link>
       <div class="menu-toggle"></div>
       <nav>
         <ul>
@@ -40,7 +40,7 @@
     <div class="md:col-span-2 pb-2 md:mb-0">
       <p class="text-gray-200">Information</p>
       <ul class="pt-5 text-gray-400">
-        <li><a href="#">TIK TAK</a> </li>
+        <li><a href="#"> TiK•TaK</a> </li>
         <li><a href="#">Politique de confidentialité</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Cookies</a></li>

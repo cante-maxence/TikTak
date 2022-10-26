@@ -1,7 +1,7 @@
 <template>
 
     <p class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-        Tik Tak<br />l’Originalité est a votre poigné
+        TiK•TaK<br />l’Originalité est a votre poigné
     </p>
     <div class=" flex m-auto  w-1/3 py-10">
         <img src="../assets/301accueil.png" alt="Une montre de luxe sur une couette bleu"
@@ -11,7 +11,7 @@
 
     <p
         class="text-white font-light text-3xl md:w-full pt-5  mx-6 text-center sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-        Bienvenue chez Tik Tak !<br />Le site qui vous permet de créer de toutes pièces une montre <br />absolument
+        Bienvenue chez TiK•TaK !<br />Le site qui vous permet de créer de toutes pièces une montre <br />absolument
         unique. Grâce à notre outil de
         conception vous pourrez<br />personnaliser une montre dans le moindre détail.
         <br /><br />
