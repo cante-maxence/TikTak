@@ -18,7 +18,7 @@
         Le temps n’attends personne alors dépêchez vous !!!
     </p>
 
-    <div class="border-sky-400 border-2 hover:border-t-4 grid grid-cols-2 my-10 xs:grid-cols-1">
+    <div class="border-sky-400 border-2 hover:border-t-4 grid grid-cols-2 my-10  xs:grid-cols-1">
 
         <div class="p-10">
             <!--Card 1-->
@@ -29,7 +29,7 @@
                 </p>
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-white text-center">Cuir Français</div>
-                    <p class="text-gray-700 text-base text-center">
+                    <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible">
                         Dans le monde du luxe, le cuir s'est imposé comme un matériau aux finitions raffinées.
                         100% Français nous vient tout droit de
                         l'Allier
@@ -59,10 +59,8 @@
                 </p>
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-white text-center">Tissu Français</div>
-                    <p class="text-gray-700 text-base text-center">
-                        Dans le monde du luxe, le cuir s'est imposé comme un matériau aux finitions raffinées.
-                        100% Français nous vient tout droit de
-                        l'Allier
+                    <p class="text-gray-700 text-base text-center invisible md:visible lg:visible xl:visible"><br />
+                        Qualité supérieure, parfaitement<br /> adapté à votre boîtier de montre.
                     </p>
                 </div>
                 <div class="radio grid grid-cols-2">
