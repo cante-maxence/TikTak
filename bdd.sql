@@ -35,7 +35,17 @@ FROM "montre"
 
 CREATE VIEW allmatériaux as
 SELECT *
-FROM "montre"
+FROM "matériaux"
+
+create view allcuir as 
+Select "montre".*
+From "montre", "materiaux"
+Where "matériaux"."id_materiaux" = "montre"."id_materiaux" AND "materiaux"."libelle_materiaux" = 'cuir'
+
+create view alltissu as 
+Select "montre".*
+From "montre", "materiaux"
+Where "matériaux"."id_materiaux" = "montre"."id_materiaux" AND "materiaux"."libelle_materiaux" = 'tissu'
 
 --
 -- code pour la création des policies
