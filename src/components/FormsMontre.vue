@@ -14,7 +14,7 @@ const props = defineProps<{
 }>();
 const montre = ref<Montres>(props.data ?? {});
 async function upsertMontre(dataForm, node) {
-  const { data, error } = await supabase.from("MONTRE").upsert(dataForm);
+  const { data, error } = await supabase.from("montre").upsert(dataForm);
   if (error) node.setErrors([error.message])
   else {
     node.setErrors([]);

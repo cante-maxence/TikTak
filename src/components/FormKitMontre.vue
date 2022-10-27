@@ -10,7 +10,9 @@ defineProps<{
     <FormKit :name="name" :label="label" value="#FFFFFF" type="radio" :options="colors" :sections-schema="{
         inner: { $el: null },
         decorator: { $el: null },
-    }" input-class="peer sr-only" options-class="flex gap-1">
+    }" input-class="peer sr-only" options-class="flex gap-1" :classes="{
+    legend: 'text-white'
+}">
         <template #label="context">
             <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
                 :style="{ backgroundColor: context.option.value }">
