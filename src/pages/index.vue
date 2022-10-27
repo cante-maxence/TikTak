@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import FormsMontre from '@/components/FormsMontre.vue';
+</script>
+
 <template>
 
     <p class="text-white font-light text-5xl mt-10 mx-6 text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -79,7 +83,7 @@
 
     </div>
 
-
+    <!--personalisation de la montre-->
 
 
 
