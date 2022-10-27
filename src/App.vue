@@ -1,5 +1,8 @@
 <template>
-  <main class="bg-black p-5 bg-gradient-to-b from-[#080038] to-black ...">
+
+  <main class="bg-black  p-5 bg-gradient-to-b from-[#080038] to-black ...">
+
+
 
 
     <header class="">
@@ -23,7 +26,6 @@
       </nav>
       <div class="clearfix"></div>
     </header>
-
 
 
     <!-- Affiche les pages -->
@@ -81,6 +83,7 @@
       </div>
     </div>
   </footer>
+
 
 </template>
 
@@ -194,3 +197,16 @@ nav ul li a:hover {
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      isDark: true,
+    };
+  },
+  components: {
+
+  },
+};
+</script>

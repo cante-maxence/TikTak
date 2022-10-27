@@ -3,7 +3,7 @@
 - **Nom :Cante**
 - **Prénom :Maxence**
 - **URL maquette Figma:https://www.figma.com/file/UztRVUoUXpx1LBf9aBGkUQ/Maquette-301?node-id=13%3A91**
-- **URL publique du site :**
+- **URL publique du site : https://sae301-cante-maxence.netlify.app**
 - **URL projet Supabase :https://app.supabase.com/org/elated-blush-y2459me/settings#team**
   - [x] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
@@ -13,7 +13,7 @@
 
 Vous avez rendu à la racine du projet :
 
-- [ ] Le modèle conceptuel de données (nom : [MCD.png](/MCD.png) ou [MCD.pdf](/MCD.pdf) [^1])
+- [x] Le modèle conceptuel de données (nom : [MCD.png](/MCD.png) ou [MCD.pdf](/MCD.pdf) [^1])
 - [ ] Et compléter le fichier [bdd.sql](/bdd.sql) détaillant le code pour la création des tables, vues et policies créées
 - [x] Avez-vous bien invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase comme développeur ?
 
@@ -58,7 +58,7 @@ Noté sur 40.
   - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
     - liens
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
+  - [x] textes "accessibles" (eg. 'sr-only')
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.
