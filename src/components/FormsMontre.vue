@@ -6,7 +6,7 @@ import { colors } from '@/types';
 import FormKitMontre from '@/components/FormKitMontre.vue'
 import { useRouter } from "vue-router";
 import { supabase } from '@/supabase';
-let user = supabase.auth.user()
+
 const router = useRouter();
 const props = defineProps<{
   data?: Montres;
@@ -37,8 +37,7 @@ if (props.id) {
       <SvgMontre class="w-64" v-bind="montre" />
     </div>
     <FormKit type="form" v-model="montre" @submit="upsertMontre">
-      <FormKit name="id_user" label="id_user" type="text" :value="user.id" disabled="disabled" outer-class="hidden">
-      </FormKit>
+
       <FormKitMontre name="ecran" label="ecran" />
       <FormKitMontre name="boitier" label="boitier" />
       <FormKitMontre name="bracelet" label="bracelet" />
