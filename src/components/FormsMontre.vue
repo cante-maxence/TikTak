@@ -34,15 +34,15 @@ if (props.id) {
 }
 </script>
 <template>
-  <div class="p-2">
+  <div class="p-2 ">
     <div class="w-64">
       <SvgMontre class="w-64" v-bind="montre" />
     </div>
-    <FormKit type="form" v-model="montre" @submit="upsertMontre">
+    <FormKit type="form" v-model="montre" @submit="upsertMontre" :submit-attrs="{ classes: { input: 'text-white' } }">
 
-      <FormKitMontre name="ecran" label="ecran" />
-      <FormKitMontre name="boitier" label="boitier" />
-      <FormKitMontre name="bracelet" label="bracelet" />
+      <FormKitMontre name="ecran" label="Écran" />
+      <FormKitMontre name="boitier" label="Boitier" />
+      <FormKitMontre name="bracelet" label="Bracelet" />
     </FormKit>
   </div>
 </template>
